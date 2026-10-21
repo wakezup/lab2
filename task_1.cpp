@@ -57,9 +57,7 @@ std::list<int> ReadList() {
 
 void SwapMiddleElements(std::vector<int>& container) {
     std::vector<int>::iterator left_middle = container.begin();
-    for (std::size_t i = 0; i < container.size() / 2 - 1; ++i) {
-        ++left_middle;
-    }
+    left_middle += container.size() / 2 - 1;
     std::vector<int>::iterator right_middle = left_middle;
     ++right_middle;
     std::swap(*left_middle, *right_middle);
@@ -67,9 +65,7 @@ void SwapMiddleElements(std::vector<int>& container) {
 
 void SwapMiddleElements(std::deque<int>& container) {
     std::deque<int>::iterator left_middle = container.begin();
-    for (std::size_t i = 0; i < container.size() / 2 - 1; ++i) {
-        ++left_middle;
-    }
+    left_middle += container.size() / 2 - 1;
     std::deque<int>::iterator right_middle = left_middle;
     ++right_middle;
     std::swap(*left_middle, *right_middle);
